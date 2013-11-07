@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title><%= node['fqdn'] %></title>
+
+    <style>
+      body {
+          font: normal 100%/1.4 "Lucida Grande", Helvetica, Verdana, sans-serif;
+          width: 60%;
+          margin: 0 auto;
+          background-color: #E4E4E4;
+      }
+
+      header {
+          padding: 2% 0 2% 0;
+      }
+
+      footer {
+          padding-top: 5%;
+          text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1><%= node['fqdn'] %></h1>
+    </header>
+
+    <p>You&rsquo;ve come across a place where nothing exists. It&rsquo;s just a
+       hostname, or the very root of a poorly configured web server configuration.</p>
+
+    <footer>
+      <% if @support_email != nil and @status_page != nil %>
+      <p><a href="mailto:<%= @support_email %>"><%= @support_email %></a> &mdash;
+         <a href="http://<%= @status_page %>"><%= @status_page %></a></p>
+      <% else %>
+        <% if @support_email != nil %>
+        <p><a href="mailto:<%= @support_email %>"><%= @support_email %></a></p>
+        <% end %>
+        <% if @status_page != nil %>
+        <p><a href="http://<%= @status_page %>"><%= @status_page %></a></p>
+        <% end %>
+      <% end %>
+    </footer>
+  </body>
+</html>

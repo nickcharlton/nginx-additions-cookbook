@@ -27,6 +27,19 @@ template "/etc/nginx/sites-available/default" do
   notifies :reload, 'service[nginx]'
 end
 
+# create the holding page
+template '/var/www/index.html' do
+  source  'holding-page.erb'
+  owner   'www-data'
+  group   'www-data'
+  mode    '0644'
+
+  variables(
+    :support_email => node['nginx-additions']['support_email'],
+    :status_page => node['nginx-additions']['status_page']
+  )
+end
+
 # generate the error pages
 error_pages = [
   {
