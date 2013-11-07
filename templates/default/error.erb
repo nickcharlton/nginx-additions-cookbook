@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title><%= @name %></title>
+
+    <style>
+      body {
+          font: normal 100%/1.4 "Lucida Grande", Helvetica, Verdana, sans-serif;
+          width: 60%;
+          margin: 0 auto;
+          background-color: #E4E4E4;
+      }
+
+      header {
+          padding: 2% 0 2% 0;
+      }
+
+      footer {
+          padding-top: 5%;
+          text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1><%= @name %></h1>
+    </header>
+
+    <p><%= @explanation %></p>
+
+    <p><%= @message %></p>
+
+    <footer>
+      <p><a href="mailto:ops@nullgrid.net">ops@nullgrid.net</a> &mdash;
+         <a href="http://status.nullgrid.net">status.nullgrid.net</a></p>
+    </footer>
+  </body>
+</html>
