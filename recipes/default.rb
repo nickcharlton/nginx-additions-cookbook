@@ -11,6 +11,7 @@
 # see also: http://wiki.apache.org/httpd/FileSystemPermissions
 directory '/var/www' do
   owner 'www-data'
+  group 'www-data'
   mode 00750
 
   action :create
