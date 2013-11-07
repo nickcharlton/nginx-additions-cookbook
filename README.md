@@ -19,7 +19,11 @@ own templates for the error handlers and default page.
 
 ## Attributes
 
-None.
+There are two attributes to configure the footer of the error pages. Both default
+to none.
+
+* `nginx-additions['support_email']`: An email address to list.
+* `nginx-additions['status_page']`: A support page to email, without the `http://`.
 
 ## Recipes
 
