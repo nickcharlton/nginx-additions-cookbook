@@ -36,6 +36,13 @@ error_pages = [
     :message => 'It\'s possible that you were linked to the wrong place, or '\
       'something has been configured incorrectly. If you need help, email the '\
       'address below.'
+  },
+  {
+    :code => 500,
+    :name => '500 Internal Server Error',
+    :explanation => 'Sorry, something went wrong.',
+    :message => 'These kind of errors are tracked automatically, so try '\
+      'refreshing. If you need help, email the address below.'
   }
 ]
 
