@@ -62,3 +62,13 @@ error_pages.each do |page|
     )
   end
 end
+
+# set the global error handlers
+template "/etc/nginx/conf.d/error.conf" do
+  source 'error-conf.erb'
+  owner 'root'
+  group 'root'
+  mode '0644'
+
+  notifies :reload, 'service[nginx]'
+end
