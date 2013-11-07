@@ -2,7 +2,7 @@ server {
   listen   80;
   server_name  <%= node['hostname'] %>;
 
-  access_log  <%= node['nginx']['log_dir'] %>/default-site.access.log;
+  access_log  /var/log/nginx/default-site.access.log;
 
   location / {
     root   /var/www;
