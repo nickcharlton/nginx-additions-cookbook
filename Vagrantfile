@@ -20,6 +20,10 @@ Vagrant.configure("2") do |config|
         :server_root_password => 'rootpass',
         :server_debian_password => 'debpass',
         :server_repl_password => 'replpass'
+      },
+      'nginx-additions' => {
+        :support_email => 'ops@nullgrid.net',
+        :status_page => 'status.nullgrid.net'
       }
     }
 

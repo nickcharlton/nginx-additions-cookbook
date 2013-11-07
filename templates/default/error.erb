@@ -34,8 +34,17 @@
     <p><%= @message %></p>
 
     <footer>
-      <p><a href="mailto:ops@nullgrid.net">ops@nullgrid.net</a> &mdash;
-         <a href="http://status.nullgrid.net">status.nullgrid.net</a></p>
+      <% if @support_email != nil and @status_page != nil %>
+      <p><a href="mailto:<%= @support_email %>"><%= @support_email %></a> &mdash;
+         <a href="http://<%= @status_page %>"><%= @status_page %></a></p>
+      <% else %>
+        <% if @support_email != nil %>
+        <p><a href="mailto:<%= @support_email %>"><%= @support_email %></a></p>
+        <% end %>
+        <% if @status_page != nil %>
+        <p><a href="http://<%= @status_page %>"><%= @status_page %></a></p>
+        <% end %>
+      <% end %>
     </footer>
   </body>
 </html>

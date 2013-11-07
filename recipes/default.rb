@@ -50,8 +50,8 @@ error_pages.each do |page|
       :name => page[:name],
       :explanation => page[:explanation],
       :message => page[:message],
-      :support_email => 'ops@nullgrid.net',
-      :status_page => 'status.nullgrid.net'
+      :support_email => node['nginx-additions']['support_email'],
+      :status_page => node['nginx-additions']['status_page']
     )
   end
 end
