@@ -18,7 +18,7 @@ directory '/var/www' do
 end
 
 # reconfigure the default template
-template "#{node['nginx']['dir']}/sites-available/default" do
+template "/etc/nginx/sites-available/default" do
   source 'default-site.erb'
   owner  'root'
   group  'root'
