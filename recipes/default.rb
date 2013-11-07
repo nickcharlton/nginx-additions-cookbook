@@ -6,3 +6,12 @@
 # 
 # MIT Licensed.
 #
+
+# create the web root
+# see also: http://wiki.apache.org/httpd/FileSystemPermissions
+directory '/var/www' do
+  owner 'www-data'
+  mode 00750
+
+  action :create
+end
