@@ -24,7 +24,8 @@ Vagrant.configure("2") do |config|
     }
 
     chef.run_list = [
-        "recipe[nginx-additions::default]"
+      'recipe[nginx]',
+      'recipe[nginx-additions::default]'
     ]
   end
 end
