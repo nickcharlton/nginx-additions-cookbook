@@ -10,11 +10,9 @@
 # create the web root
 # see also: http://wiki.apache.org/httpd/FileSystemPermissions
 directory '/var/www' do
-  owner 'www-data'
-  group 'www-data'
-  mode 00750
-
-  action :create
+  owner   'www-data'
+  group   'www-data'
+  mode    '0750'
 end
 
 # reconfigure the default template
